@@ -63,6 +63,23 @@ you would type the following command to install setuptools
     apt-get install python-setuptools
 ---------------------------------------
 
+###Auto Start shadowsocks
+
+    apt-get install supervisor
+Edit file 
+
+    vim /etc/supervisor/supervisord.conf
+Paste in file
+
+    [program:shadowsocks]
+    command=ssserver -c /etc/shadowsocks.json
+    autostart=true
+    autorestart=true
+    user=root
+    log_stderr=true
+    logfile=/var/log/shadowsocks.log
+reboot
+
 Documentation
 -------------
 
