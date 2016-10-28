@@ -29,6 +29,7 @@ CentOS:
     yum install python-setuptools && easy_install pip
     pip install shadowsocks
 
+
 Windows:
 
 See [Install Server on Windows]
@@ -51,6 +52,16 @@ To check the log:
 
 Check all the options via `-h`. You can also use a [Configuration] file
 instead.
+
+###Troubleshoot
+
+If you have a bug, 
+**from setuptools import setup
+ImportError: No module named setuptools**
+you would type the following command to install setuptools
+ 
+    apt-get install python-setuptools
+---------------------------------------
 
 Documentation
 -------------
